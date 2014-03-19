@@ -3,6 +3,9 @@
 @theme-black: rgb(35, 31, 32);
 @background-color: black;
 
+@gray-width: 149px;
+@divbar-height: 20px;
+
 .rotate(@deg) {
 	-webkit-transform: rotate(@deg); 
 	-moz-transform: rotate(@deg);	
@@ -57,14 +60,17 @@ body {
 	
 	
 	header {
-		
+		height: 128px;
+		position: fixed;
+		width: 100%;
+		z-index: 100;
 		
 		div.branding {
 			position: relative;
 			background-color: @theme-black;
 			padding: 4px;
 			min-height: 100px;
-			border-bottom: solid 20px @theme-green;
+			border-bottom: solid @divbar-height @theme-green;
 			
 			h1 {
 				color: @theme-green;
@@ -76,12 +82,13 @@ body {
 				margin: 0;
 			}
 			div.contact {
+				wdith: @gray-width;
 				position: absolute;
 				bottom: -20px;
 				right: 0;
 				color: @theme-gray;
 				padding: 4px;
-				border-bottom: solid 20px @theme-gray;
+				border-bottom: solid @divbar-height @theme-gray;
 				
 				span {
 					display: block;
@@ -99,17 +106,17 @@ body {
 			z-index: 100;
 			position: relative;
 			
-			
 			ul {
-				margin: 0;
 				display: inline-block;
 				background-color: @background-color;
-				.bottomleftBorderRadius(10px);
-				.bottomrightBorderRadius(10px);
+				.bottomleftBorderRadius(20px);
+				.bottomrightBorderRadius(20px);
+				border: solid @theme-gray 1px;
+				border-top: none;
 				
 				li {
 					display: inline-block;
-					margin: 2px 20px;
+					margin: 4px 20px;
 					
 					a {
 						color: @theme-gray;
@@ -126,10 +133,27 @@ body {
 	}
 	
 	div.content {
+		
+		
 		div.scroller {
-			position: relative;
-			top: -27px;
 			text-align: center;
+		}
+	}
+	
+	div.sectionDivider {
+		height: 20px;
+		background-color: @theme-green;
+		width: 100%;
+		position: relative;
+		
+		&:after {
+			content: " ";
+			width: @gray-width;
+			height: @divbar-height;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background-color: @theme-gray;
 		}
 	}
 }
