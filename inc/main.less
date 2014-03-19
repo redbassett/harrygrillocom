@@ -2,7 +2,6 @@
 @theme-gray: rgb(140, 140, 140);
 @theme-black: rgb(35, 31, 32);
 @background-color: black;
-@background-image: url(../img/yb001-020212.jpg);
 
 .rotate(@deg) {
 	-webkit-transform: rotate(@deg); 
@@ -14,15 +13,43 @@
 	text-decoration: inherit;
 }
 
+.topleftBorderRadius(@radius) {
+	-webkit-border-top-left-radius: @radius;
+	-moz-border-radius-topleft: @radius;
+	border-top-left-radius: @radius;
+}
+
+.toprightBorderRadius(@radius) {
+	-webkit-border-top-right-radius: @radius;
+	-moz-border-radius-topright: @radius;
+	border-top-right-radius: @radius;
+}
+
+.bottomleftBorderRadius(@radius) {
+	-webkit-border-bottom-left-radius: @radius;
+	-moz-border-radius-bottomleft: @radius;
+	border-bottom-left-radius: @radius;
+}
+
+.bottomrightBorderRadius(@radius) {
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-radius-bottomright: @radius;
+	border-bottom-right-radius: @radius;
+}
+
+.borderRadius(@radius) {
+	.topleftBorderRadius(@radius);
+	.toprightBorderRadius(@radius);
+	.bottomleftBorderRadius(@radius);
+	.bottomrightBorderRadius(@radius);
+}
+
 a[href^="tel:"] {
 	.nolink;
 }
 
 body {
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-	/*background-image: @background-image;
-	background-repeat: no-repeat;
-	background-position: center top;*/
 	background-color: @background-color;
 }
 
@@ -72,8 +99,13 @@ body {
 			z-index: 100;
 			position: relative;
 			
+			
 			ul {
 				margin: 0;
+				display: inline-block;
+				background-color: @background-color;
+				.bottomleftBorderRadius(10px);
+				.bottomrightBorderRadius(10px);
 				
 				li {
 					display: inline-block;
