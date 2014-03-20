@@ -1,3 +1,4 @@
+// marks currently scrolled-to section active in nav
 (function(){
 	$(function(){
 		nav = $('nav#mainNav')
@@ -17,3 +18,26 @@
 		});
 	});
 })();
+
+// production history
+/*(function(){
+	$(function(){
+		section = $('section#resume section#productionHistory');
+		table = section.find('table.data-display');
+		sort = section.find('ul.sort');
+		
+		// load JSON
+		(function(){
+			$.getJSON('../production-history.json', function(source){
+				
+			});
+		})();
+		
+		// bind actions to display links, do sort
+		/*(function(){
+			sort.find('a[data-display="ldesign"]').click(function(){
+				
+			})
+		})();
+	});
+})();*/
