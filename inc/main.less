@@ -7,8 +7,8 @@
 @divbar-height: 20px;
 
 .rotate(@deg) {
-	-webkit-transform: rotate(@deg); 
-	-moz-transform: rotate(@deg);	
+	-webkit-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
 }
 
 .nolink {
@@ -57,21 +57,21 @@ body {
 }
 
 #wrapper {
-	
-	
+
+
 	header {
 		height: 128px;
 		position: fixed;
 		width: 100%;
 		z-index: 100;
-		
+
 		div.branding {
 			position: relative;
 			background-color: @theme-black;
 			padding: 4px;
 			min-height: 100px;
 			border-bottom: solid @divbar-height @theme-green;
-			
+
 			h1 {
 				color: @theme-green;
 				margin: 0;
@@ -89,28 +89,28 @@ body {
 				color: @theme-gray;
 				padding: 4px;
 				border-bottom: solid @divbar-height @theme-gray;
-				
+
 				span {
 					display: block;
 					text-align: right;
-					
+
 					&.email a, &.phone a {
 						.nolink;
 					}
 				}
 			}
 		}
-		
+
 		nav#mainNav {
 			text-align: center;
 			z-index: 100;
 			position: relative;
-			
+
 			background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,1));
 			background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1));
 			background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1));
 			background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1));
-			
+
 			ul {
 				display: inline-block;
 				background-color: @background-color;
@@ -119,17 +119,17 @@ body {
 				border: solid @theme-gray 1px;
 				border-top: none;
 				margin: 0;
-				
+
 				li {
 					display: inline-block;
 					margin: 4px 20px;
-					
+
 					a {
 						color: @theme-gray;
 						font-size: 16pt;
 						text-decoration: inherit;
 						background-color: inherit;
-						
+
 						&:hover {
 							color: lighten(@theme-gray, 10%);
 						}
@@ -138,18 +138,18 @@ body {
 			}
 		}
 	}
-	
+
 	div.content {
 		div.scroller {
 			text-align: center;
 		}
-		
+
 		div.sectionDivider {
 			height: 20px;
 			background-color: @theme-green;
 			width: 100%;
 			position: relative;
-			
+
 			&:after {
 				content: " ";
 				width: @gray-width;
@@ -160,10 +160,10 @@ body {
 				background-color: @theme-gray;
 			}
 		}
-		
+
 		section {
-			
-			
+
+
 			h2 {
 				color: @theme-green;
 			}
