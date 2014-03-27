@@ -54,6 +54,11 @@ a[href^="tel:"] {
 body {
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	background-color: @background-color;
+	color: @theme-gray;
+}
+
+span.small {
+	font-size: 0.916em;
 }
 
 #wrapper {
@@ -168,19 +173,58 @@ body {
 				text-align: center;
 			}
 
+			&#ldesign {
+				
+				div.gallery {
+					
+					ul {
+						margin: 0;
+						
+						li {
+							display: inline-block;
+							
+							div {
+								text-align: center;
+								
+								div.info {
+									h3 {
+										margin: 0;
+									}
+									& > span {
+										display: block;
+										
+										&.director {
+											
+										}
+										&.producer {
+											
+										}
+										&.date {
+											
+										}
+										&.info {
+											
+										}
+									}
+								}
+								ul {
+									li {
+										img {
+											max-height: 300px;
+											max-width: 300px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
 
 			h2 {
 				color: @theme-green;
 			}
-		}
-	}
-}
-
-div.scroller {
-
-	ul {
-		li {
-			display: inline-block;
 		}
 	}
 }
