@@ -1,3 +1,10 @@
+// init smoothScroll
+(function(){
+	$(function(){
+		smoothScroll.init();
+	});
+})();
+
 // marks currently scrolled-to section active in nav
 (function(){
 	$(function(){
