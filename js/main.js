@@ -1,7 +1,9 @@
 // init smoothScroll
 (function(){
 	$(function(){
-		smoothScroll.init();
+		smoothScroll.init({
+			offset: 128+$('nav#mainNav').height()
+		});
 	});
 })();
 
