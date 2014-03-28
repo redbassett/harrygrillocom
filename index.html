@@ -7,10 +7,13 @@
 	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
-	<link rel="stylesheet/less" href="inc/main.less">
+	<link rel="stylesheet/less" href="less/main.less">
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js"></script>
-	<script type="text/javascript" src="inc/waypoints.min.js"></script>
-	<script type="text/javascript" src="inc/main.js"></script>
+	<script type="text/javascript" src="js/waypoints.min.js"></script>
+	<script src="js/smooth-scroll.js"></script>
+	<script type="text/javascript" src="js/lightbox-2.6.min.js"></script>
+	<link href="css/lightbox.css" rel="stylesheet">
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -25,20 +28,85 @@
 			</div>
 			<nav id="mainNav">
 				<ul class="nav">
-					<li><a href="#about">About</a></li>
-					<li><a href="#ldesign">Lighting Design</a></li>
-					<li><a href="#resume">Resum&eacute;</a></li>
+					<li><a data-scroll href="#home">Home</a></li>
+					<!--<li><a href="#about">About</a></li>-->
+					<li><a data-scroll href="#ldesign">Lighting Design</a></li>
+					<!--<li><a data-scroll href="#resume">R&eacute;sum&eacute;</a></li>-->
 				</ul>
 			</nav>
 		</header>
 		<div class="content">
 			<section id="home">
-				<div class="scroller" id="scrollerMain">
+				<div>
 					<img src="img/yb001-020212.jpg">
 				</div>
 			</section>
 			<div class="sectionDivider"></div>
-			
+			<section id="ldesign">
+				<h2>Lighting Design</h2>
+				<div id="showListGallery" class="gallery">
+					<ul>
+						<li>
+							<div>
+								<div class="info">
+									<h3>The Yellow Boat</h3>
+								</div>
+								
+								<ul>
+									<li><a href="img/yb002-020212.jpg" data-lightbox="yellowboat"><img src="img/yb002-020212.jpg"></a></li>
+									<li><a href="img/yb003-020212.jpg" data-lightbox="yellowboat"><img src="img/yb003-020212.jpg"></a></li>
+									<li><a href="img/yb004-020212.jpg" data-lightbox="yellowboat"><img src="img/yb004-020212.jpg"></a></li>
+									<li><a href="img/yb005-020212.jpg" data-lightbox="yellowboat"><img src="img/yb005-020212.jpg"></a></li>
+									<li><a href="img/yb006-020212.jpg" data-lightbox="yellowboat"><img src="img/yb006-020212.jpg"></a></li>
+									<li><a href="img/yb007-020212.jpg" data-lightbox="yellowboat"><img src="img/yb007-020212.jpg"></a></li>
+									<li><a href="img/yb008-020212.jpg" data-lightbox="yellowboat"><img src="img/yb008-020212.jpg"></a></li>
+									<li><a href="img/yb009-020212.jpg" data-lightbox="yellowboat"><img src="img/yb009-020212.jpg"></a></li>
+									<li><a href="img/yb010-020212.jpg" data-lightbox="yellowboat"><img src="img/yb010-020212.jpg"></a></li>
+									<li><a href="img/yb011-020212.jpg" data-lightbox="yellowboat"><img src="img/yb011-020212.jpg"></a></li>
+									<li><a href="img/yb012-020212.jpg" data-lightbox="yellowboat"><img src="img/yb012-020212.jpg"></a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<div class="sectionDivider"></div>
+			<!--<section id="about">
+				<h2>About Harry</h2>
+			</section>
+			<div class="sectionDivider"></div>-->
+			<!--<section id="ldesign">
+				<h2>Lighting Design</h2>
+			</section>
+			<div class="sectionDivider"></div>-->
+			<!--<section id="resume">
+				<h2>R&eacute;sum&eacute;</h2>
+				<section id="productionHistory">
+					<div class="tableSortHeader">
+						<ul class="sort sortPosition">
+							<li><a href="#" data-display="ldesign">Lighting Design</a></li>
+							<li><a href="#" data-display="electrics">Electrics</a></li>
+							<li><a href="#" data-display="rigging">Rigging</a></li>
+							<li><a href="#" data-display="sound">Sound Design</a></li>
+						</ul>
+					</div>
+					<table class="data-display" id="history-table">
+						<tbody>
+							<tr>
+								<td>
+									<div class="history-row">
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</section>
+			<div class="sectionDivider"></div>-->
 		</div>
 	</div><!-- #wrapper -->
 </body>
