@@ -58,7 +58,7 @@ body {
 }
 
 span.small {
-	font-size: 0.916em;
+	font-size: 0.75em;
 }
 
 #wrapper {
@@ -139,6 +139,10 @@ span.small {
 						&:hover {
 							color: lighten(@theme-gray, 10%);
 						}
+						
+						&.active {
+							color: lighten(@theme-gray, 20%);
+						}
 					}
 				}
 			}
@@ -155,6 +159,10 @@ span.small {
 			background-color: @theme-green;
 			width: 100%;
 			position: relative;
+			
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
 
 			&:after {
 				content: " ";
@@ -174,7 +182,7 @@ span.small {
 			}
 
 			&#ldesign {
-				margin-top: 30px;
+				
 				
 				div.gallery {
 					
@@ -186,28 +194,6 @@ span.small {
 							
 							div {
 								text-align: center;
-								
-								div.info {
-									h3 {
-										margin: 0;
-									}
-									& > span {
-										display: block;
-										
-										&.director {
-											
-										}
-										&.producer {
-											
-										}
-										&.date {
-											
-										}
-										&.info {
-											
-										}
-									}
-								}
 								ul {
 									li {
 										img {
